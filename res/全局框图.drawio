@@ -1,0 +1,54 @@
+<mxfile host="65bd71144e">
+    <diagram id="d9zLbCucSwrjs-X7M9T-" name="第 1 页">
+        <mxGraphModel dx="566" dy="323" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="26" value="" style="edgeStyle=none;html=1;fontFamily=Comic Sans MS;fontSize=21;fontColor=#FFFFFF;strokeWidth=4;strokeColor=#F0F0F0;targetPerimeterSpacing=-3;startSize=0;endSize=8;" edge="1" parent="1" source="9" target="7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Github密钥配置" style="rhombus;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;fontSize=18;fontColor=#000000;strokeColor=#080808;fillColor=#FFFFFF;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="220" y="247.5" width="180" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="edgeStyle=none;html=1;fontFamily=Comic Sans MS;fontSize=21;fontColor=#FFFFFF;" edge="1" parent="1" source="2" target="9">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="" style="edgeStyle=none;html=1;fontFamily=Comic Sans MS;fontSize=21;fontColor=#FFFFFF;strokeWidth=4;strokeColor=#F0F0F0;targetPerimeterSpacing=-3;startSize=0;endSize=8;" edge="1" parent="1" source="2">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="220" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2" value="&lt;b&gt;&lt;font face=&quot;Comic Sans MS&quot; style=&quot;font-size: 18px&quot;&gt;Git安装与配置&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#080808;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="260" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;b&gt;&lt;font face=&quot;Comic Sans MS&quot; style=&quot;font-size: 18px&quot;&gt;Hexo安装与使用&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#080808;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="600" y="260" width="150" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="" style="edgeStyle=none;html=1;fontFamily=Comic Sans MS;fontSize=21;fontColor=#FFFFFF;strokeWidth=4;strokeColor=#F0F0F0;targetPerimeterSpacing=-3;startSize=0;endSize=8;" edge="1" parent="1" source="7" target="6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;b&gt;&lt;font face=&quot;Comic Sans MS&quot; style=&quot;font-size: 18px&quot;&gt;Nodejs安装&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#080808;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="260" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="40" y="180" width="380" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;fontSize=18;fontColor=#050505;strokeColor=default;strokeWidth=2;fillColor=none;" vertex="1" parent="44">
+                    <mxGeometry width="380" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="&lt;font size=&quot;1&quot; style=&quot;line-height: 0.4&quot;&gt;&lt;b style=&quot;font-size: 13px&quot;&gt;Github作为服务器，即使不用域名也能将网页发布在互联网上。使用本地Git对服务器文件进行更新操作&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;fontSize=18;fontColor=#050505;strokeColor=default;strokeWidth=2;fillColor=#FFFFFF;align=left;" vertex="1" parent="44">
+                    <mxGeometry width="380" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="430" y="180" width="340" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;fontSize=18;fontColor=#050505;strokeColor=default;strokeWidth=2;fillColor=none;" vertex="1" parent="45">
+                    <mxGeometry width="340" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="&lt;font size=&quot;1&quot; style=&quot;line-height: 0.4&quot;&gt;&lt;b style=&quot;font-size: 13px&quot;&gt;Hexo是一个基于md文本内容实现静态网页构建及发布的套件。通过Nodejs可对其进行安装。&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;fontSize=18;fontColor=#050505;strokeColor=default;strokeWidth=2;fillColor=#FFFFFF;align=left;" vertex="1" parent="45">
+                    <mxGeometry width="340" height="50" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
