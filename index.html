@@ -230,11 +230,11 @@
 <li>对于2021年4月之后获得的tdms数据，时间戳增加13个小时可获得真实UTC时间，增加21个小时可获得北京时间。</li>
 <li><input disabled="" type="checkbox"> 后续需要解决tdms文件时间戳写入误差的问题</li>
 </ul>
-
+<h4 id="修正示例代码"><a href="#修正示例代码" class="headerlink" title="修正示例代码"></a>修正示例代码</h4><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 1. 读取一个tdms文件，并获得其时间戳</span></span><br><span class="line">date= meta.date;      </span><br><span class="line">==&gt; date = <span class="string">&#x27;10-Oct-2020 22:07:48:204&#x27;</span> </span><br><span class="line"></span><br><span class="line"><span class="comment">% 2. 将字符串的微秒部分分离，形成可被datenum读取的字符串格式</span></span><br><span class="line">taleTemp= date(<span class="keyword">end</span><span class="number">-3</span>:<span class="number">1</span>:<span class="keyword">end</span>);     </span><br><span class="line">&gt;&gt; taleTemp = <span class="string">&#x27;:204&#x27;</span></span><br><span class="line"></span><br><span class="line">date=date(<span class="number">1</span>:<span class="keyword">end</span><span class="number">-4</span>);              </span><br><span class="line">&gt;&gt; date = <span class="string">&#x27;10-Oct-2020 22:07:48&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 3. 将时间戳字符串转换为时间戳</span></span><br><span class="line">dateNum = datenum(date)        </span><br><span class="line"></span><br><span class="line"><span class="comment">% 4. 将时间戳转换为time类型</span></span><br><span class="line">date= datetime(dateNum,<span class="string">&#x27;ConvertFrom&#x27;</span>,<span class="string">&#x27;datenum&#x27;</span>)  </span><br><span class="line">&gt;&gt; date =(datetime)<span class="number">2020</span><span class="number">-10</span><span class="number">-10</span> <span class="number">22</span>:<span class="number">07</span>:<span class="number">48</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 5. 修正时间戳</span></span><br><span class="line">dateTime_UTC=date+hours(<span class="number">5</span>);<span class="comment">% 增加5小时时延，修正为UTC时间</span></span><br><span class="line">&gt;&gt; dateTime_UTC = (datetime)<span class="number">2020</span><span class="number">-10</span><span class="number">-11</span> <span class="number">03</span>:<span class="number">07</span>:<span class="number">48</span></span><br><span class="line"></span><br><span class="line">dateTime_BJ=date+hours(<span class="number">13</span>); <span class="comment">% 增加13小时时延，修正为北京时间</span></span><br><span class="line">&gt;&gt; dateTime_BJ = (datetime)<span class="number">2020</span><span class="number">-10</span><span class="number">-11</span> <span class="number">11</span>:<span class="number">07</span>:<span class="number">48</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 6. 再转换为字符串格式</span></span><br><span class="line">TimeStr_UTC=datestr(dateTime_UTC)</span><br><span class="line">&gt;&gt; TimeStr_UTC = <span class="string">&#x27;11-Oct-2020 03:07:48&#x27;</span></span><br><span class="line"></span><br><span class="line">TimeStr_BJ=datestr(dateTime_BJ)</span><br><span class="line">&gt;&gt; TimeStr_BJ = <span class="string">&#x27;11-Oct-2020 11:07:48&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 7. 补充微秒部分</span></span><br><span class="line">TimeStr_UTC=[TimeStr_UTC taleTemp]</span><br><span class="line">&gt;&gt; TimeStr_UTC = <span class="string">&#x27;11-Oct-2020 03:07:48:204&#x27;</span></span><br><span class="line"></span><br><span class="line">TimeStr_BJ=[TimeStr_BJ taleTemp]</span><br><span class="line">&gt;&gt; TimeStr_BJ =<span class="string">&#x27;11-Oct-2020 11:07:48:204&#x27;</span></span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/09/19/20220919DAS%E6%94%AF%E6%92%91-%E6%97%B6%E9%97%B4%E6%88%B3%E8%AF%BB%E5%8F%96%E5%BC%82%E5%B8%B8/" data-id="cl89wu8jt0002rgtx2aejfkqh" data-title="20220919DAS支撑-时间戳读取异常" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/09/19/20220919DAS%E6%94%AF%E6%92%91-%E6%97%B6%E9%97%B4%E6%88%B3%E8%AF%BB%E5%8F%96%E5%BC%82%E5%B8%B8/" data-id="cl8a3cfi40004ogtxekvygssb" data-title="20220919DAS支撑-时间戳读取异常" class="article-share-link">Share</a>
       
       
       
@@ -308,7 +308,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/09/18/20220918DAS%E6%94%AF%E6%92%91-%E7%80%91%E5%B8%83%E5%9B%BE%E5%87%BA%E7%8E%B0%E2%80%9C%E6%A0%85%E6%A0%8F%E2%80%9D/" data-id="cl89wu8jn0000rgtx6nh1c4q3" data-title="20220918DAS支撑_瀑布图出现“栅栏”" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/09/18/20220918DAS%E6%94%AF%E6%92%91-%E7%80%91%E5%B8%83%E5%9B%BE%E5%87%BA%E7%8E%B0%E2%80%9C%E6%A0%85%E6%A0%8F%E2%80%9D/" data-id="cl8a3cfhw0000ogtx0f8tg8td" data-title="20220918DAS支撑_瀑布图出现“栅栏”" class="article-share-link">Share</a>
       
       
       
@@ -346,7 +346,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/09/18/20220918%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-Hexo%E6%A1%86%E6%9E%B6%E7%9A%84%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE/" data-id="cl89wu8jr0001rgtx4fmm53a0" data-title="20220918个人博客_Hexo框架的主题设置" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/09/18/20220918%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-Hexo%E6%A1%86%E6%9E%B6%E7%9A%84%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE/" data-id="cl8a3cfi00001ogtxgexubje1" data-title="20220918个人博客_Hexo框架的主题设置" class="article-share-link">Share</a>
       
       
       
@@ -507,7 +507,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/09/18/20220918%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-%E5%9F%BA%E4%BA%8EHexo%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5%E7%94%9F%E6%88%90%E5%8F%8AGithub%E9%83%A8%E7%BD%B2/" data-id="cl89wu8jv0004rgtxdw1nhjr9" data-title="20220918个人博客_基于Hexo静态网页生成及Github部署" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/09/18/20220918%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-%E5%9F%BA%E4%BA%8EHexo%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5%E7%94%9F%E6%88%90%E5%8F%8AGithub%E9%83%A8%E7%BD%B2/" data-id="cl8a3cfi20002ogtx1oz74flq" data-title="20220918个人博客_基于Hexo静态网页生成及Github部署" class="article-share-link">Share</a>
       
       
       
@@ -558,7 +558,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/09/18/hello-world/" data-id="cl89wu8ju0003rgtxcdwnc3xq" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/09/18/hello-world/" data-id="cl8a3cfi30003ogtx69di56or" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
