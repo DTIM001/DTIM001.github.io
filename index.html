@@ -1,847 +1,294 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-10-25 15:25:21'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
   
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
-
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-<meta name="generator" content="Hexo 6.3.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-20220927-器件测试-PD" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/09/27/20220927-%E5%99%A8%E4%BB%B6%E6%B5%8B%E8%AF%95-PD/" class="article-date">
-  <time class="dt-published" datetime="2022-09-27T03:53:53.000Z" itemprop="datePublished">2022-09-27</time>
-</a>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/09/27/20220927-%E5%99%A8%E4%BB%B6%E6%B5%8B%E8%AF%95-PD/">20220927-器件测试-PD</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>重新构建的探测器实验报告如下：</li>
-</ul>
-<iframe src='/pdfjs/web/viewer.html?file=/res/remix_PDA1008(AC)测试报告.pdf' style='width:100%;height:800px'></iframe>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/09/27/20220927-%E5%99%A8%E4%BB%B6%E6%B5%8B%E8%AF%95-PD/" data-id="cl8mc1qou0006lgtxhus583xb" data-title="20220927-器件测试-PD" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-20220921-器件测试-重新构建探测器测试报告" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/09/21/20220921-%E5%99%A8%E4%BB%B6%E6%B5%8B%E8%AF%95-%E9%87%8D%E6%96%B0%E6%9E%84%E5%BB%BA%E6%8E%A2%E6%B5%8B%E5%99%A8%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A/" class="article-date">
-  <time class="dt-published" datetime="2022-09-21T07:00:08.000Z" itemprop="datePublished">2022-09-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/09/21/20220921-%E5%99%A8%E4%BB%B6%E6%B5%8B%E8%AF%95-%E9%87%8D%E6%96%B0%E6%9E%84%E5%BB%BA%E6%8E%A2%E6%B5%8B%E5%99%A8%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A/">20220921-器件测试-重新构建探测器测试报告</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="补救一个不理想的实验报告"><a href="#补救一个不理想的实验报告" class="headerlink" title="补救一个不理想的实验报告"></a>补救一个不理想的实验报告</h1><ul>
-<li><p>上次做的实验报告被老徐拎出来“教育”了（其实是被怼）。<br><img src="https://timdspicturebed.oss-cn-beijing.aliyuncs.com/img/20220921151759.png"></p>
-</li>
-<li><p>我确实是酝酿了很长时间才将报告撰写完成，抛开事实不谈，我真觉得自己完成得还不错。<strong>但不成正比的投入回报比会让我无意中美好我的工作成果。</strong></p>
-</li>
-<li><p>七八月份的状态确实非常非常的差，家乡、亲人和朋友都有不好的消息。于自身，我需要的是实际的自我梳理，以此来度过身体和心理的低谷。</p>
-</li>
-</ul>
-<h2 id="探测器测试报告"><a href="#探测器测试报告" class="headerlink" title="探测器测试报告"></a>探测器测试报告</h2><ul>
-<li>测试对象是一款新式的器件 —— 交流耦合(AC)的探测器。实验室之前使用的多是直流耦合(DC)，测试报告里的测试方法，和其背后的理论体系因此也是基于DC探测器的。</li>
-<li>虽然DC耦合与AC耦合探测器原理和功能相近，但在实际测试时，<strong>物理量的对应</strong>、<strong>测试设备的参数选择</strong>、<strong>测试方法</strong>等都存在不小的差异。（上面提到的三个方面是徐老师重点提的，也是可以在实验报告中清除看到的）</li>
-<li>所以在撰写测试报告时，不能仅仅按照之前报告的思路来进行，需要介绍清楚“我要获得的物理量是什么”、“我采取的实验方法是什么”以及“我为什么要选择使用这些设备参数”。</li>
-<li>实验目的、实验器材这些都比较固定，没什么问题。</li>
-</ul>
-<h3 id="第一个重点要放在测试过程上"><a href="#第一个重点要放在测试过程上" class="headerlink" title="第一个重点要放在测试过程上"></a>第一个重点要放在<em>测试过程</em>上</h3><ul>
-<li>在实验目的中你告诉了大家你要测什么，而测试过程中你需要告诉大家你实现目标的原理和步骤，原理要具备可信度，而步骤要明确且内容丰富。</li>
-</ul>
-<h4 id="比如，我首先要测噪声"><a href="#比如，我首先要测噪声" class="headerlink" title="比如，我首先要测噪声"></a>比如，我首先要测噪声</h4><ul>
-<li><p>在不同的采样率下噪声表现都有不同（为什么不同？怎么不同的？&lt;附件中提及&gt;），那么当我选定某个采样率后。如何对其他采样率有表征作用？</p>
-<blockquote>
-<p>20220922留言：没有表征作用，采样率越高就能囊括更高频段的噪声，测试时通过调节存储深度和波形记录时长，将采样率设置为最大。垂直分辨率也尽量选择到最灵敏的程度。（在报告中要具体说明为什么，以及是怎么设置参数的。）</p>
-</blockquote>
-</li>
-<li><p><strong>第一个需要测的是示波器底噪</strong>。我可以先对比直流耦合以及交流耦合情况下的噪声情况。从我的感性认识上来说，应该是峰峰值的测量结果相同，但平均值不同。</p>
-</li>
-<li><p><strong>第二个需要将上电的探测器接入进行测试</strong>。因为我还不知道对于这个测试来说，示波器选择直流耦合或交流耦合时哪一个更具说服力。那么我可以都做，但展示在报告中选择可以说明更多问题的那一个进行展示。</p>
-</li>
-</ul>
-<hr>
-<h4 id="噪声测完后，需要测功率响应曲线，并计算灵敏度系数"><a href="#噪声测完后，需要测功率响应曲线，并计算灵敏度系数" class="headerlink" title="噪声测完后，需要测功率响应曲线，并计算灵敏度系数"></a>噪声测完后，需要测功率响应曲线，并计算灵敏度系数</h4><ul>
-<li>我之前设计的整体实验思路是没有问题的，在这次的报告中，需要<strong>讲明白光功率是什么，对应的电压响应又是什么？</strong>。并<strong>获得解释清楚参数（特别是要考虑 <em>脉冲频率</em> 和 <em>脉冲上升沿</em> ）选择的原因</strong>。<strong>说明清楚实验的具体步骤（如何用文字与图像加深印象）</strong>。</li>
-</ul>
-<hr>
-<h4 id="最后测频谱响应"><a href="#最后测频谱响应" class="headerlink" title="最后测频谱响应"></a>最后测频谱响应</h4><ul>
-<li><p>这个还是有些乱， 但可以先做EDFA的方法；</p>
-</li>
-<li><p>再详细了解一下徐老师说的利用 AOM 脉冲响应的方法，做一个对比。</p>
-</li>
-</ul>
-<hr>
-<h3 id="第二个重点则是在结果展示上"><a href="#第二个重点则是在结果展示上" class="headerlink" title="第二个重点则是在结果展示上"></a>第二个重点则是在<em>结果展示</em>上</h3><ul>
-<li>做完实验后需要对实验结果进行处理并归纳总结，不能干巴巴的放个结果在那。</li>
-<li>并且文字总结要与图像和表格相对应，不要牛头不对马嘴。</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/09/21/20220921-%E5%99%A8%E4%BB%B6%E6%B5%8B%E8%AF%95-%E9%87%8D%E6%96%B0%E6%9E%84%E5%BB%BA%E6%8E%A2%E6%B5%8B%E5%99%A8%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A/" data-id="cl8mc1qot0005lgtxezyn0hqp" data-title="20220921-器件测试-重新构建探测器测试报告" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-20220921-DAS支撑-DAS时间戳补充_hexo pdf预览" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/09/21/20220921-DAS%E6%94%AF%E6%92%91-DAS%E6%97%B6%E9%97%B4%E6%88%B3%E8%A1%A5%E5%85%85_hexo%20pdf%E9%A2%84%E8%A7%88/" class="article-date">
-  <time class="dt-published" datetime="2022-09-21T02:28:00.000Z" itemprop="datePublished">2022-09-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/09/21/20220921-DAS%E6%94%AF%E6%92%91-DAS%E6%97%B6%E9%97%B4%E6%88%B3%E8%A1%A5%E5%85%85_hexo%20pdf%E9%A2%84%E8%A7%88/">20220921_DAS支撑_DAS时间戳问题的补充与hexo pdf预览</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<ul>
-<li>url:: <ul>
-<li><a target="_blank" rel="noopener" href="https://juejin.cn/post/7084037580756353038">hexo-pdf</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_33384402/article/details/107240192">关于iframe尺寸调节的方法</a></li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<ul>
-<li>在和徐老师交流后，对时间戳问题了解更深刻了一些，并更深挖掘了一些东西，用“较为规范”的语言（虽然老徐说我的文档有点绕哈）形成文档，在此记录。(当然，也是为了试一试Hexo的文档插入功能)</li>
-</ul>
-<iframe src='/pdfjs/web/viewer.html?file=/res/DAS时间戳读取异常.pdf' style='width:100%;height:800px'></iframe>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/09/21/20220921-DAS%E6%94%AF%E6%92%91-DAS%E6%97%B6%E9%97%B4%E6%88%B3%E8%A1%A5%E5%85%85_hexo%20pdf%E9%A2%84%E8%A7%88/" data-id="cl8mc1qot0004lgtx39c9394y" data-title="20220921_DAS支撑_DAS时间戳问题的补充与hexo pdf预览" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-20220919DAS支撑-时间戳读取异常" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/09/19/20220919DAS%E6%94%AF%E6%92%91-%E6%97%B6%E9%97%B4%E6%88%B3%E8%AF%BB%E5%8F%96%E5%BC%82%E5%B8%B8/" class="article-date">
-  <time class="dt-published" datetime="2022-09-19T03:21:33.000Z" itemprop="datePublished">2022-09-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/09/19/20220919DAS%E6%94%AF%E6%92%91-%E6%97%B6%E9%97%B4%E6%88%B3%E8%AF%BB%E5%8F%96%E5%BC%82%E5%B8%B8/">20220919DAS支撑-时间戳读取异常</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="DAS-时间戳读取问题"><a href="#DAS-时间戳读取问题" class="headerlink" title="DAS 时间戳读取问题"></a>DAS 时间戳读取问题</h1><blockquote>
-<ul>
-<li>2022年9月6日，蔡云鹏师兄在检查数据文件时发现使用matlab读取tdms文件获得的时间戳与实际记录不同。</li>
-<li>我之前也遇到过同样的问题，但被我略过了。借着蔡师兄提出这个问题，我就来查一查具体是什么原因导致的时间戳读取异常。</li>
-</ul>
-</blockquote>
-<hr>
-<h2 id="问题陈述"><a href="#问题陈述" class="headerlink" title="问题陈述"></a>问题陈述</h2><ul>
-<li><p>依照读取方式的不同，我对DAS的数据文件体系中包含的时间信息进行了分类：</p>
-<ul>
-<li><ol>
-<li>tdms读取时间：通过matlab读取tdms文件后后获得的时间戳。<strong>应该为tdms文件生成时的的UTC时间</strong>。<blockquote>
-<p>matlab有两种读取库：<a target="_blank" rel="noopener" href="https://www.mathworks.com/matlabcentral/fileexchange/44206-converttdms-v10">ConvertTdms</a> 和 <a target="_blank" rel="noopener" href="https://github.com/NeuralDataFormats/tdms_matlab_original_version">tdms_matlab</a>,我使用 <a target="_blank" rel="noopener" href="https://github.com/NeuralDataFormats/tdms_matlab_original_version">tdms_matlab</a> 进行数据读取。</p>
-</blockquote>
-</li>
-</ol>
-</li>
-<li><ol start="2">
-<li>segyio显示时间：使用segy转换程序时，在程序界面显示的时间。<strong>应该为tdms文件生成时的UTC时间</strong>。</li>
-</ol>
-</li>
-<li><ol start="3">
-<li>文件时间：连续采集模式下，会根据设备的系统时间生成文件名。<strong>系统时间，通常被认为是北京时间，比UTC时间晚8小时</strong>。</li>
-</ol>
-</li>
-<li><ol start="4">
-<li>实际的UTC时间：参考时间，通过文件时间和segyio时间倒推得到。</li>
-</ol>
-</li>
-</ul>
-</li>
-<li><p>理论上，能够具备一致性解释的时间信息体系应该如下图所示：<br><img src="https://timdspicturebed.oss-cn-beijing.aliyuncs.com/img/20220920190957.png"></p>
-</li>
-</ul>
-<h3 id="2020年DAS轨道交通实验中的tdms时间异常"><a href="#2020年DAS轨道交通实验中的tdms时间异常" class="headerlink" title="2020年DAS轨道交通实验中的tdms时间异常"></a>2020年DAS轨道交通实验中的tdms时间异常</h3><blockquote>
-<p>以文件1011110846-00006.tdms为例</p>
-</blockquote>
-<ul>
-<li><strong>文件时间</strong>指示列车4到达的大概时间点在10月11日11:08:46，与实际列车时刻记录相符：</li>
-</ul>
-<p><img src="https://timdspicturebed.oss-cn-beijing.aliyuncs.com/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220919122237.png"></p>
-<ul>
-<li>使用matlab读取获得的<strong>tdms时间</strong>为2020年10月10日22:07:48,与列车时刻记录相差近13小时。这不符合实际情况，tdms时间为UTC时间，由北京时间记录的列车时刻表与其相差应该为8小时。</li>
-</ul>
-<blockquote>
-<p><img src="https://timdspicturebed.oss-cn-beijing.aliyuncs.com/img/20220920081214.png"></p>
-</blockquote>
-<ul>
-<li><p>使用segy格式转换程序，读取<strong>segyio时间</strong>为2020年10月11日11:07:48，与列车时刻记录相近。这不符合实际情况，segyio也应为UTC时间，与tdms时间相同，与列车时刻记录相差8小时。</p>
-<blockquote>
-<p><img src="https://timdspicturebed.oss-cn-beijing.aliyuncs.com/img/%E6%8D%95%E8%8E%B7.PNG"></p>
-</blockquote>
-</li>
-<li><p>结合文件时间合segyio时间，可给出一个<strong>参考的UTC时间</strong>：2020年10月11日3:07:48</p>
-</li>
-<li><p>综上，可绘制出此文件可提供的时间信息体系：<br><img src="https://timdspicturebed.oss-cn-beijing.aliyuncs.com/img/%E5%88%97%E8%BD%A64%E6%97%B6%E9%97%B4%E4%BF%A1%E6%81%AF%E4%BD%93%E7%B3%BB.png"></p>
-</li>
-<li><p>从上图可以得出：</p>
-<ul>
-<li>从tdms格式文件转换到segy格式文件，tdms时间与segyio时间应该统一，但实际情况是其时间戳会增加13小时；</li>
-<li>写入tdms文件的时间戳应该就是实际的UTC时间，但事实上存在误差，提前了5个小时。</li>
-</ul>
-</li>
-<li><p>蔡师兄提供的<code>1011171740-00001.tdms</code>文件也存在同样的问题：<br><img src="https://timdspicturebed.oss-cn-beijing.aliyuncs.com/img/%E5%88%97%E8%BD%A6x%E6%97%B6%E9%97%B4%E4%BF%A1%E6%81%AF%E4%BD%93%E7%B3%BB.png"></p>
-</li>
-</ul>
-<h3 id="最新DAS系统时间信息体系中存在的问题"><a href="#最新DAS系统时间信息体系中存在的问题" class="headerlink" title="最新DAS系统时间信息体系中存在的问题"></a>最新DAS系统时间信息体系中存在的问题</h3><blockquote>
-<p>考虑到徐老师曾在2021年对程序进行过更改，抽取2022年海试实验的数据文件进行检查，发现并没有从根本上解决问题。</p>
-</blockquote>
-<ul>
-<li>选取TS2-13-2航次海试 JZ07潜次的数据文件<code>0528151020-00422.tdms</code>进行考察，其时间信息体系如下：</li>
-</ul>
-<p><img src="https://timdspicturebed.oss-cn-beijing.aliyuncs.com/img/%E6%B5%B7%E8%AF%95%E6%96%87%E4%BB%B6%E6%97%B6%E9%97%B4%E4%BF%A1%E6%81%AF%E4%BD%93%E7%B3%BB.png"></p>
-<ul>
-<li><p>上图表明：徐老师为了保证格式转换时写入segy文件的时间戳与UTC时间对应，将数据采集时写入tdms文件的时间前移了8小时，并没有解决格式转换时时间增量的问题。反而增大了tdms时间的误差。</p>
-</li>
-<li><p>统计在2020年和2021年的实验数据文件中，tdms时间与实际时间相差情况。找到这两种时间记录状态切换的时间点，为蔡师兄大规模数据处理时提出建议：</p>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>试验场地</th>
-<th>试验时间</th>
-<th>文件名指示时间</th>
-<th>segyio时间</th>
-<th>tdms时间</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>三亚</td>
-<td>2020.08</td>
-<td>08&#x2F;01_07:12:14</td>
-<td>2020&#x2F;08&#x2F;01_07:11:18</td>
-<td>2020&#x2F;07&#x2F;31_18:11:18</td>
-</tr>
-<tr>
-<td>长春</td>
-<td>2020.11</td>
-<td>11&#x2F;16_12:32:44</td>
-<td>2020&#x2F;11&#x2F;16_12:31:43</td>
-<td>2020&#x2F;11&#x2F;15_23:31:43</td>
-</tr>
-<tr>
-<td>西藏</td>
-<td>2021.04</td>
-<td>04&#x2F;09_13:59:23</td>
-<td>2021&#x2F;04&#x2F;09_05:59:21</td>
-<td>2021&#x2F;04&#x2F;08_16:59:21</td>
-</tr>
-<tr>
-<td>邢台</td>
-<td>2021.07</td>
-<td>07&#x2F;17_16:25:50</td>
-<td>2021&#x2F;07&#x2F;17_08:25:49</td>
-<td>2021&#x2F;07&#x2F;16_19:25:49</td>
-</tr>
-<tr>
-<td>云南</td>
-<td>2021.07</td>
-<td>07&#x2F;09_16:08:44</td>
-<td>2021&#x2F;07&#x2F;09_08:08:43</td>
-<td>2021&#x2F;07&#x2F;08_19:08:43</td>
-</tr>
-<tr>
-<td>三亚</td>
-<td>2021.09</td>
-<td>09&#x2F;27_17:17:15</td>
-<td>2021&#x2F;09&#x2F;27_09:17:05</td>
-<td>2021&#x2F;09&#x2F;26_20:17:05</td>
-</tr>
-</tbody></table>
-<ul>
-<li>从上表可以看出，时间记录状态的更改发生在2020年11月长春实验到2021年4月西藏实验之间。</li>
-</ul>
-<h4 id="应对方案"><a href="#应对方案" class="headerlink" title="应对方案"></a>应对方案</h4><ul>
-<li>对于2020年11月之前获得的tdms数据，时间戳增加5个小时可获得真实的UTC时间，增加13个小时可获得北京时间；</li>
-<li>对于2021年4月之后获得的tdms数据，时间戳增加13个小时可获得真实UTC时间，增加21个小时可获得北京时间。</li>
-<li><input disabled="" type="checkbox"> 后续需要解决tdms文件时间戳写入误差的问题</li>
-</ul>
-<h4 id="修正示例代码"><a href="#修正示例代码" class="headerlink" title="修正示例代码"></a>修正示例代码</h4><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 1. 读取一个tdms文件（1011171740-00001.tdms），并获得其时间戳</span></span><br><span class="line">[data,meta]=tdms_read_data(<span class="string">&#x27;1011171740-00001.tdms&#x27;</span>);</span><br><span class="line">date= meta.date;      </span><br><span class="line">&gt;&gt; date = <span class="string">&#x27;10-Oct-2020 22:07:48:204&#x27;</span> </span><br><span class="line"></span><br><span class="line"><span class="comment">% 2. 将字符串的微秒部分分离，形成可被datenum读取的字符串格式</span></span><br><span class="line">taleTemp= date(<span class="keyword">end</span><span class="number">-3</span>:<span class="number">1</span>:<span class="keyword">end</span>);     </span><br><span class="line">&gt;&gt; taleTemp = <span class="string">&#x27;:204&#x27;</span></span><br><span class="line"></span><br><span class="line">date=date(<span class="number">1</span>:<span class="keyword">end</span><span class="number">-4</span>);              </span><br><span class="line">&gt;&gt; date = <span class="string">&#x27;10-Oct-2020 22:07:48&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 3. 将时间戳字符串转换为时间戳</span></span><br><span class="line">dateNum = datenum(date)        </span><br><span class="line"></span><br><span class="line"><span class="comment">% 4. 将时间戳转换为time类型</span></span><br><span class="line">date= datetime(dateNum,<span class="string">&#x27;ConvertFrom&#x27;</span>,<span class="string">&#x27;datenum&#x27;</span>)  </span><br><span class="line">&gt;&gt; date =(datetime)<span class="number">2020</span><span class="number">-10</span><span class="number">-10</span> <span class="number">22</span>:<span class="number">07</span>:<span class="number">48</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 5. 修正时间戳</span></span><br><span class="line">dateTime_UTC=date+hours(<span class="number">5</span>);<span class="comment">% 增加5小时时延，修正为UTC时间</span></span><br><span class="line">&gt;&gt; dateTime_UTC = (datetime)<span class="number">2020</span><span class="number">-10</span><span class="number">-11</span> <span class="number">03</span>:<span class="number">07</span>:<span class="number">48</span></span><br><span class="line"></span><br><span class="line">dateTime_BJ=date+hours(<span class="number">13</span>); <span class="comment">% 增加13小时时延，修正为北京时间</span></span><br><span class="line">&gt;&gt; dateTime_BJ = (datetime)<span class="number">2020</span><span class="number">-10</span><span class="number">-11</span> <span class="number">11</span>:<span class="number">07</span>:<span class="number">48</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 6. 再转换为字符串格式</span></span><br><span class="line">TimeStr_UTC=datestr(dateTime_UTC)</span><br><span class="line">&gt;&gt; TimeStr_UTC = <span class="string">&#x27;11-Oct-2020 03:07:48&#x27;</span></span><br><span class="line"></span><br><span class="line">TimeStr_BJ=datestr(dateTime_BJ)</span><br><span class="line">&gt;&gt; TimeStr_BJ = <span class="string">&#x27;11-Oct-2020 11:07:48&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 7. 补充微秒部分</span></span><br><span class="line">TimeStr_UTC=[TimeStr_UTC taleTemp]</span><br><span class="line">&gt;&gt; TimeStr_UTC = <span class="string">&#x27;11-Oct-2020 03:07:48:204&#x27;</span></span><br><span class="line"></span><br><span class="line">TimeStr_BJ=[TimeStr_BJ taleTemp]</span><br><span class="line">&gt;&gt; TimeStr_BJ =<span class="string">&#x27;11-Oct-2020 11:07:48:204&#x27;</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/09/19/20220919DAS%E6%94%AF%E6%92%91-%E6%97%B6%E9%97%B4%E6%88%B3%E8%AF%BB%E5%8F%96%E5%BC%82%E5%B8%B8/" data-id="cl8mc1qos0003lgtxcr135trk" data-title="20220919DAS支撑-时间戳读取异常" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-20220918DAS支撑-瀑布图出现“栅栏”" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/09/18/20220918DAS%E6%94%AF%E6%92%91-%E7%80%91%E5%B8%83%E5%9B%BE%E5%87%BA%E7%8E%B0%E2%80%9C%E6%A0%85%E6%A0%8F%E2%80%9D/" class="article-date">
-  <time class="dt-published" datetime="2022-09-18T12:26:53.000Z" itemprop="datePublished">2022-09-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/09/18/20220918DAS%E6%94%AF%E6%92%91-%E7%80%91%E5%B8%83%E5%9B%BE%E5%87%BA%E7%8E%B0%E2%80%9C%E6%A0%85%E6%A0%8F%E2%80%9D/">20220918DAS支撑_瀑布图出现“栅栏”</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>2022年9月18日，健家次对瀑布图的出现“栅栏”的情况提出问题，“显示器分辨率不合适”的解释显然不能解决他们的疑惑。本篇笔记仅能陈述问题，并从单道的尺度证明数据情况正常，<strong>暂时没有该问题具体的解释思路</strong>。</p>
-</blockquote>
-<h1 id="问题陈述"><a href="#问题陈述" class="headerlink" title="问题陈述"></a>问题陈述</h1><ul>
-<li>DAS的瀑布图界面在长时间工作后会出现“栅栏”形式的图样，明显不是正常信号。青藏所那边想知道造成这种异常的原因，以及是否会对信号本身造成影响。</li>
-</ul>
-<p><img src="https://timdspicturebed.oss-cn-beijing.aliyuncs.com/img/20220919082313.png"></p>
-<blockquote>
-<p>我的直接印象是：不会对信号造成影响，只不过是显示错误。<br>老板的解释是：不会对信号造成影响，是由显示器造成的。</p>
-</blockquote>
-<h1 id="回放检查"><a href="#回放检查" class="headerlink" title="回放检查"></a>回放检查</h1><blockquote>
-<p>使用青藏所反馈的实例文件：”0916200733-00282.tdms”</p>
-</blockquote>
-<ul>
-<li>回放图像中没有明显栅格出现，因为回放图像的时间尺标为20s，而实时图像的时间尺标为0.5s。从实时图像上栅格出现的周期进行估计，其频率约为50Hz左右。</li>
-</ul>
-<p><img src="https://timdspicturebed.oss-cn-beijing.aliyuncs.com/img/%E5%9B%9E%E6%94%BE%E6%A3%80%E6%9F%A5.png"></p>
-<hr>
-<h1 id="频谱检查"><a href="#频谱检查" class="headerlink" title="频谱检查"></a>频谱检查</h1><ul>
-<li>对各道的频谱进行逐一查看，发现在55Hz左右存在尖刺，下面展示112道和200道德频谱，并通过扩展200道频谱的尺标，定位<strong>尖刺频率存在于57Hz左右</strong>，与民用交流电频率相符。</li>
-</ul>
-<p><img src="https://timdspicturebed.oss-cn-beijing.aliyuncs.com/img/%E9%A2%91%E8%B0%B1%E6%A3%80%E6%9F%A5.png"></p>
-<hr>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ul>
-<li><p>从本次检查结果来看，市电的民用频率会对DAS的数据造成影响：在瀑布图内出现“栅栏”。</p>
-</li>
-<li><p>徐老师关于屏幕刷新的判断并没有进行验证，我也没有想好该怎么办。（但我猜测应该不是这个原因）</p>
-</li>
-<li><p>确切的原因是什么？以及如何避免？</p>
-<ul>
-<li><input disabled="" type="checkbox"> <a target="_blank" rel="noopener" href="https://post.smzdm.com/p/avwz26x4/">电源净化器</a></li>
-<li><input disabled="" type="checkbox"> 等到设备拿到手后需要在实验室情况下看看接市电以及“电小二”便携电池是否也存在50Hz左右的干扰。</li>
-<li><input disabled="" type="checkbox"> 可以对比一下海试时的数据，可以找深海所他们确认一下当时的供电设计。</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/09/18/20220918DAS%E6%94%AF%E6%92%91-%E7%80%91%E5%B8%83%E5%9B%BE%E5%87%BA%E7%8E%B0%E2%80%9C%E6%A0%85%E6%A0%8F%E2%80%9D/" data-id="cl8mc1qom0000lgtx2kyp0000" data-title="20220918DAS支撑_瀑布图出现“栅栏”" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-20220918个人博客-Hexo框架的主题设置" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/09/18/20220918%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-Hexo%E6%A1%86%E6%9E%B6%E7%9A%84%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE/" class="article-date">
-  <time class="dt-published" datetime="2022-09-18T09:26:43.000Z" itemprop="datePublished">2022-09-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/09/18/20220918%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-Hexo%E6%A1%86%E6%9E%B6%E7%9A%84%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE/">20220918个人博客_Hexo框架的主题设置</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/09/18/20220918%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-Hexo%E6%A1%86%E6%9E%B6%E7%9A%84%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE/" data-id="cl8mc1qoq0001lgtxb1lq9j63" data-title="20220918个人博客_Hexo框架的主题设置" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-20220918个人博客-基于Hexo静态网页生成及Github部署" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/09/18/20220918%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-%E5%9F%BA%E4%BA%8EHexo%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5%E7%94%9F%E6%88%90%E5%8F%8AGithub%E9%83%A8%E7%BD%B2/" class="article-date">
-  <time class="dt-published" datetime="2022-09-18T04:43:30.000Z" itemprop="datePublished">2022-09-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/09/18/20220918%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-%E5%9F%BA%E4%BA%8EHexo%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5%E7%94%9F%E6%88%90%E5%8F%8AGithub%E9%83%A8%E7%BD%B2/">20220918个人博客_基于Hexo静态网页生成及Github部署</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="基于Hexo静态网页生成及Github部署"><a href="#基于Hexo静态网页生成及Github部署" class="headerlink" title="基于Hexo静态网页生成及Github部署"></a>基于Hexo静态网页生成及Github部署</h1><!-- TOC -->
-
-<ul>
-<li><ol>
-<li>本地Git配置</li>
-</ol>
-</li>
-<li><ol start="2">
-<li>Github配置</li>
-</ol>
-</li>
-<li><ol start="3">
-<li>Nodejs以及Hexo安装</li>
-</ol>
-</li>
-<li><ol start="4">
-<li>文章写作及发布</li>
-</ol>
-</li>
-<li><ol start="5">
-<li>可扩展的内容有</li>
-</ol>
-<ul>
-<li>5.1. 主题更换</li>
-<li>5.2. 其他</li>
-</ul>
-</li>
-</ul>
-<!-- /TOC -->
-<blockquote>
-<p>选择 <strong>Hexo+github</strong> 方案进行个人博客构建。本篇笔记记录搭建的方案与细节，如下图所示：<br><img src="https://timdspicturebed.oss-cn-beijing.aliyuncs.com/img/20220918144024.png"></p>
-</blockquote>
-<hr>
-<h2 id="1-本地Git配置"><a href="#1-本地Git配置" class="headerlink" title="1. 本地Git配置"></a>1. 本地Git配置</h2><ul>
-<li>安装<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git</a>,并查看是否安装成功。</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git --version <span class="comment">#查询当前git版本</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>安装成功后配置git连接的账户</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;你的GitHub用户&quot;</span></span><br><span class="line">$ git config --global user.email <span class="string">&quot;你的GitHub注册邮箱&quot;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>生成与 Github 连接的ssh认证密钥</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">&quot;你的GitHub注册邮箱&quot;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>密钥生成后会自动保存在 C:\Users\_admin_name_\.ssh\id_rsa.pub 中，可使用记<br>事本打开。</li>
-</ul>
-<p><img src="https://timdspicturebed.oss-cn-beijing.aliyuncs.com/img/20220918155716.png"></p>
-<hr>
-<h2 id="2-Github配置"><a href="#2-Github配置" class="headerlink" title="2. Github配置"></a>2. Github配置</h2><ul>
-<li>确定github用户名（本文用admin指代）。创建新库并命名为：”admin.github.io”。（下图标红，是因为我以存在同名库）</li>
-</ul>
-<p><img src="https://timdspicturebed.oss-cn-beijing.aliyuncs.com/img/20220918153819.png"></p>
-<ul>
-<li>配置布设密钥。进到新建的Github仓库 点击右上角<code>setting</code>进入设置找到<code>Deploy keys</code>, 选择<code>Add Deploy keys</code> ,”Title” 随便填写, “Key” 的内容填刚才id_rsa.pub文件中复制的内容</li>
-</ul>
-<p><img src="https://timdspicturebed.oss-cn-beijing.aliyuncs.com/img/20220918152905.png"></p>
-<blockquote>
-<p><strong>注意：库的名称一定要保证格式为“github用户名.github.io”。</strong></p>
-</blockquote>
-<ul>
-<li>添加完成后，进行测试</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>你将会看到</li>
-</ul>
-<p><img src="https://timdspicturebed.oss-cn-beijing.aliyuncs.com/img/20220918153500.png"></p>
-<hr>
-<h2 id="3-Nodejs以及Hexo安装"><a href="#3-Nodejs以及Hexo安装" class="headerlink" title="3. Nodejs以及Hexo安装"></a>3. Nodejs以及Hexo安装</h2><ul>
-<li><p>Nodejs<a href="nodejs.org/en/download/">下载地址</a></p>
-</li>
-<li><p>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。（npm在安装Nodejs的过程中会附带下载）</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save hexo-deployer-git</span><br><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="4-文章写作及发布"><a href="#4-文章写作及发布" class="headerlink" title="4. 文章写作及发布"></a>4. 文章写作及发布</h2><ul>
-<li>在命令行模式（cmd、bash、shell）下进入想要将网页存放的路径，使用<code>hexo init</code>命令生成文件夹。</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init (foldername)</span><br></pre></td></tr></table></figure>
-<p><img src="https://pic3.zhimg.com/80/v2-f93ed7f7a3861ce13111492c7153a632_720w.jpg"></p>
-<ul>
-<li>通过记事本打开<code>_config.yml</code>，对页面配置进行修改<br><img src="https://timdspicturebed.oss-cn-beijing.aliyuncs.com/img/20220918161915.png"></li>
-</ul>
-<blockquote>
-<p>注：①网络教程中会将branch的设置为master，这会导致内容更新时网络页面不发生更新。要将branch设置为main；②repo地址为：<a target="_blank" rel="noopener" href="https://github.com/username.github.io.git">https://github.com/username.github.io.git</a></p>
-</blockquote>
-<ul>
-<li>将路径切换到目标文件夹后，可执行新建文章、生成网页、本地伺服、服务器端发布等操作。</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> (folderpath)</span><br><span class="line">$ hexo new [layout] &lt;title&gt; </span><br><span class="line"><span class="comment"># 新建文章（md格式），保存在`.\source\_posts`中，layout默认为 post。可以通过修改 _config.yml 中的 default_layout 参数来指定默认布局。</span></span><br><span class="line">$ hexo clean </span><br><span class="line"><span class="comment"># 清除缓存</span></span><br><span class="line">$ hexo generate</span><br><span class="line"><span class="comment"># 简写 hexo g, 生成静态页面文件</span></span><br><span class="line">$ hexo server [-p 5000]</span><br><span class="line"><span class="comment"># 简写 hexo s, 开启本地伺服，默认本地端口4000，可更改，在浏览器中输入http://localhost:4000打开网页</span></span><br><span class="line">$ hexo deploy</span><br><span class="line"><span class="comment"># 简写hexo d， 将网页发布到服务器中，服务器端的网页更新会受到本地缓存影响偏慢，按 `ctrl+F5` 执行页面缓存刷新</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>完成布设后，在浏览器输入 username.github.io 即可打开发布的网页</li>
-</ul>
-<h2 id="5-可扩展的内容有"><a href="#5-可扩展的内容有" class="headerlink" title="5. 可扩展的内容有"></a>5. 可扩展的内容有</h2><h3 id="5-1-主题更换"><a href="#5-1-主题更换" class="headerlink" title="5.1. 主题更换"></a>5.1. 主题更换</h3><ul>
-<li><p><input disabled="" type="checkbox"> 
-<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/22197688">如何自己搭建一个个人网站？</a></p>
-</li>
-<li><p><input disabled="" type="checkbox"> 
-<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/9f794db64f42">Hexo的主题更换与使用教程</a></p>
-</li>
-<li><p><input disabled="" type="checkbox"> 
-<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/22735619">VI：GitHub + Hexo (3)：安装主题</a></p>
-</li>
-</ul>
-<h3 id="5-2-其他"><a href="#5-2-其他" class="headerlink" title="5.2. 其他"></a>5.2. 其他</h3><ul>
-<li><p><input disabled="" type="checkbox"> 
-<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/137476045">绑定域名</a></p>
-</li>
-<li><p><input disabled="" type="checkbox"> 
-<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/22745430">GitHub + Hexo (4)：配置第三方服务</a></p>
-</li>
-<li><p><input disabled="" type="checkbox"> 
-<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/37353400">开箱即用，Hexo博客的github+server自动部署</a></p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/09/18/20220918%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-%E5%9F%BA%E4%BA%8EHexo%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5%E7%94%9F%E6%88%90%E5%8F%8AGithub%E9%83%A8%E7%BD%B2/" data-id="cl8mc1qor0002lgtxawbz9l5m" data-title="20220918个人博客_基于Hexo静态网页生成及Github部署" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/09/18/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2022-09-18T03:16:01.702Z" itemprop="datePublished">2022-09-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/09/18/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/09/18/hello-world/" data-id="cl8mc1qov0007lgtxf6zk3f2j" data-title="Hello World" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2022/09/27/20220927-%E5%99%A8%E4%BB%B6%E6%B5%8B%E8%AF%95-PD/">20220927-器件测试-PD</a>
-          </li>
-        
-          <li>
-            <a href="/2022/09/21/20220921-%E5%99%A8%E4%BB%B6%E6%B5%8B%E8%AF%95-%E9%87%8D%E6%96%B0%E6%9E%84%E5%BB%BA%E6%8E%A2%E6%B5%8B%E5%99%A8%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A/">20220921-器件测试-重新构建探测器测试报告</a>
-          </li>
-        
-          <li>
-            <a href="/2022/09/21/20220921-DAS%E6%94%AF%E6%92%91-DAS%E6%97%B6%E9%97%B4%E6%88%B3%E8%A1%A5%E5%85%85_hexo%20pdf%E9%A2%84%E8%A7%88/">20220921_DAS支撑_DAS时间戳问题的补充与hexo pdf预览</a>
-          </li>
-        
-          <li>
-            <a href="/2022/09/19/20220919DAS%E6%94%AF%E6%92%91-%E6%97%B6%E9%97%B4%E6%88%B3%E8%AF%BB%E5%8F%96%E5%BC%82%E5%B8%B8/">20220919DAS支撑-时间戳读取异常</a>
-          </li>
-        
-          <li>
-            <a href="/2022/09/18/20220918DAS%E6%94%AF%E6%92%91-%E7%80%91%E5%B8%83%E5%9B%BE%E5%87%BA%E7%8E%B0%E2%80%9C%E6%A0%85%E6%A0%8F%E2%80%9D/">20220918DAS支撑_瀑布图出现“栅栏”</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2022 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.4.1.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
-</html>
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hexo</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2022/09/29/%E6%B5%B7%E8%AF%95%E8%AE%BA%E6%96%87%E6%9E%84%E6%80%9D/" title="海试论文构思"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="海试论文构思"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/09/29/%E6%B5%B7%E8%AF%95%E8%AE%BA%E6%96%87%E6%9E%84%E6%80%9D/" title="海试论文构思">海试论文构思</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-09-29T00:44:48.000Z" title="Created 2022-09-29 08:44:48">2022-09-29</time></span></div><div class="content"></div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/09/27/20220927-%E5%99%A8%E4%BB%B6%E6%B5%8B%E8%AF%95-PD/" title="20220927-器件测试-PD">20220927-器件测试-PD</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-09-27T03:53:53.000Z" title="Created 2022-09-27 11:53:53">2022-09-27</time></span></div><div class="content">
+重新构建的探测器实验报告如下：
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/09/21/20220921-%E5%99%A8%E4%BB%B6%E6%B5%8B%E8%AF%95-%E9%87%8D%E6%96%B0%E6%9E%84%E5%BB%BA%E6%8E%A2%E6%B5%8B%E5%99%A8%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A/" title="20220921-器件测试-重新构建探测器测试报告">20220921-器件测试-重新构建探测器测试报告</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-09-21T07:00:08.000Z" title="Created 2022-09-21 15:00:08">2022-09-21</time></span></div><div class="content">补救一个不理想的实验报告
+上次做的实验报告被老徐拎出来“教育”了（其实是被怼）。
+
+我确实是酝酿了很长时间才将报告撰写完成，抛开事实不谈，我真觉得自己完成得还不错。但不成正比的投入回报比会让我无意中美好我的工作成果。
+
+七八月份的状态确实非常非常的差，家乡、亲人和朋友都有不好的消息。于自身，我需要的是实际的自我梳理，以此来度过身体和心理的低谷。
+
+
+探测器测试报告
+测试对象是一款新式的器件 —— 交流耦合(AC)的探测器。实验室之前使用的多是直流耦合(DC)，测试报告里的测试方法，和其背后的理论体系因此也是基于DC探测器的。
+虽然DC耦合与AC耦合探测器原理和功能相近，但在实际测试时，物理量的对应、测试设备的参数选择、测试方法等都存在不小的差异。（上面提到的三个方面是徐老师重点提的，也是可以在实验报告中清除看到的）
+所以在撰写测试报告时，不能仅仅按照之前报告的思路来进行，需要介绍清楚“我要获得的物理量是什么”、“我采取的实验方法是什么”以及“我为什么要选择使用这些设备参数”。
+实验目的、实验器材这些都比较固定，没什么问题。
+
+第一个重点要放在测试过程上
+在实验目的中你告诉了大家你要测什 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/09/21/20220921-DAS%E6%94%AF%E6%92%91-DAS%E6%97%B6%E9%97%B4%E6%88%B3%E8%A1%A5%E5%85%85_hexo%20pdf%E9%A2%84%E8%A7%88/" title="20220921_DAS支撑_DAS时间戳问题的补充与hexo pdf预览">20220921_DAS支撑_DAS时间戳问题的补充与hexo pdf预览</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-09-21T02:28:00.000Z" title="Created 2022-09-21 10:28:00">2022-09-21</time></span></div><div class="content">
+
+url:: 
+hexo-pdf
+关于iframe尺寸调节的方法
+
+
+
+
+
+在和徐老师交流后，对时间戳问题了解更深刻了一些，并更深挖掘了一些东西，用“较为规范”的语言（虽然老徐说我的文档有点绕哈）形成文档，在此记录。(当然，也是为了试一试Hexo的文档插入功能)
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/09/19/20220919DAS%E6%94%AF%E6%92%91-%E6%97%B6%E9%97%B4%E6%88%B3%E8%AF%BB%E5%8F%96%E5%BC%82%E5%B8%B8/" title="20220919DAS支撑-时间戳读取异常">20220919DAS支撑-时间戳读取异常</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-09-19T03:21:33.000Z" title="Created 2022-09-19 11:21:33">2022-09-19</time></span></div><div class="content">DAS 时间戳读取问题
+
+2022年9月6日，蔡云鹏师兄在检查数据文件时发现使用matlab读取tdms文件获得的时间戳与实际记录不同。
+我之前也遇到过同样的问题，但被我略过了。借着蔡师兄提出这个问题，我就来查一查具体是什么原因导致的时间戳读取异常。
+
+
+
+问题陈述
+依照读取方式的不同，我对DAS的数据文件体系中包含的时间信息进行了分类：
+
+
+tdms读取时间：通过matlab读取tdms文件后后获得的时间戳。应该为tdms文件生成时的的UTC时间。
+matlab有两种读取库：ConvertTdms 和 tdms_matlab,我使用 tdms_matlab 进行数据读取。
+
+
+
+
+
+segyio显示时间：使用segy转换程序时，在程序界面显示的时间。应该为tdms文件生成时的UTC时间。
+
+
+
+文件时间：连续采集模式下，会根据设备的系统时间生成文件名。系统时间，通常被认为是北京时间，比UTC时间晚8小时。
+
+
+
+实际的UTC时间：参考时间，通过文件时间和segyio时间倒推得到。
+
+
+
+
+理论上，能够具备一致性解释的时间信息体系应该如下图所示：
+
+
+2020年DAS轨道交通实验中的t ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/09/18/20220918DAS%E6%94%AF%E6%92%91-%E7%80%91%E5%B8%83%E5%9B%BE%E5%87%BA%E7%8E%B0%E2%80%9C%E6%A0%85%E6%A0%8F%E2%80%9D/" title="20220918DAS支撑_瀑布图出现“栅栏”">20220918DAS支撑_瀑布图出现“栅栏”</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-09-18T12:26:53.000Z" title="Created 2022-09-18 20:26:53">2022-09-18</time></span></div><div class="content">
+2022年9月18日，健家次对瀑布图的出现“栅栏”的情况提出问题，“显示器分辨率不合适”的解释显然不能解决他们的疑惑。本篇笔记仅能陈述问题，并从单道的尺度证明数据情况正常，暂时没有该问题具体的解释思路。
+
+问题陈述
+DAS的瀑布图界面在长时间工作后会出现“栅栏”形式的图样，明显不是正常信号。青藏所那边想知道造成这种异常的原因，以及是否会对信号本身造成影响。
+
+
+
+我的直接印象是：不会对信号造成影响，只不过是显示错误。老板的解释是：不会对信号造成影响，是由显示器造成的。
+
+回放检查
+使用青藏所反馈的实例文件：”0916200733-00282.tdms”
+
+
+回放图像中没有明显栅格出现，因为回放图像的时间尺标为20s，而实时图像的时间尺标为0.5s。从实时图像上栅格出现的周期进行估计，其频率约为50Hz左右。
+
+
+
+频谱检查
+对各道的频谱进行逐一查看，发现在55Hz左右存在尖刺，下面展示112道和200道德频谱，并通过扩展200道频谱的尺标，定位尖刺频率存在于57Hz左右，与民用交流电频率相符。
+
+
+
+总结
+从本次检查结果来看，市电的民用频率会对DAS的数据造成影响：在瀑布图内出现“栅 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/09/18/20220918%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-Hexo%E6%A1%86%E6%9E%B6%E7%9A%84%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE/" title="20220918个人博客_Hexo框架的主题设置">20220918个人博客_Hexo框架的主题设置</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-09-18T09:26:43.000Z" title="Created 2022-09-18 17:26:43">2022-09-18</time></span></div><div class="content"></div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/09/18/20220918%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-%E5%9F%BA%E4%BA%8EHexo%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5%E7%94%9F%E6%88%90%E5%8F%8AGithub%E9%83%A8%E7%BD%B2/" title="20220918个人博客_基于Hexo静态网页生成及Github部署">20220918个人博客_基于Hexo静态网页生成及Github部署</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-09-18T04:43:30.000Z" title="Created 2022-09-18 12:43:30">2022-09-18</time></span></div><div class="content">基于Hexo静态网页生成及Github部署
+
+
+
+本地Git配置
+
+
+
+Github配置
+
+
+
+Nodejs以及Hexo安装
+
+
+
+文章写作及发布
+
+
+
+可扩展的内容有
+
+
+5.1. 主题更换
+5.2. 其他
+
+
+
+
+
+选择 Hexo+github 方案进行个人博客构建。本篇笔记记录搭建的方案与细节，如下图所示：
+
+
+1. 本地Git配置
+安装Git,并查看是否安装成功。
+
+1$ git --version #查询当前git版本
+
+
+安装成功后配置git连接的账户
+
+12$ git config --global user.name &quot;你的GitHub用户&quot;$ git config --global user.email &quot;你的GitHub注册邮箱&quot;
+
+
+生成与 Github 连接的ssh认证密钥
+
+1$ ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;
+
+
+密钥生成后会自动保存在 C:\Users\_admin_name_\.ssh\id_rsa.pub 中，可使用记事本打开。
+
+
+
+2. Github ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/09/18/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-09-18T03:16:01.702Z" title="Created 2022-09-18 11:16:01">2022-09-18</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+
+More info: Writing
+Run server1$ hexo server
+
+More info: Server
+Generate static files1$ hexo generate
+
+More info: Generating
+Deploy to remote sites1$ hexo deploy
+
+More info: Deployment
+</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/09/29/%E6%B5%B7%E8%AF%95%E8%AE%BA%E6%96%87%E6%9E%84%E6%80%9D/" title="海试论文构思"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="海试论文构思"/></a><div class="content"><a class="title" href="/2022/09/29/%E6%B5%B7%E8%AF%95%E8%AE%BA%E6%96%87%E6%9E%84%E6%80%9D/" title="海试论文构思">海试论文构思</a><time datetime="2022-09-29T00:44:48.000Z" title="Created 2022-09-29 08:44:48">2022-09-29</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2022/09/27/20220927-%E5%99%A8%E4%BB%B6%E6%B5%8B%E8%AF%95-PD/" title="20220927-器件测试-PD">20220927-器件测试-PD</a><time datetime="2022-09-27T03:53:53.000Z" title="Created 2022-09-27 11:53:53">2022-09-27</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2022/09/21/20220921-%E5%99%A8%E4%BB%B6%E6%B5%8B%E8%AF%95-%E9%87%8D%E6%96%B0%E6%9E%84%E5%BB%BA%E6%8E%A2%E6%B5%8B%E5%99%A8%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A/" title="20220921-器件测试-重新构建探测器测试报告">20220921-器件测试-重新构建探测器测试报告</a><time datetime="2022-09-21T07:00:08.000Z" title="Created 2022-09-21 15:00:08">2022-09-21</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2022/09/21/20220921-DAS%E6%94%AF%E6%92%91-DAS%E6%97%B6%E9%97%B4%E6%88%B3%E8%A1%A5%E5%85%85_hexo%20pdf%E9%A2%84%E8%A7%88/" title="20220921_DAS支撑_DAS时间戳问题的补充与hexo pdf预览">20220921_DAS支撑_DAS时间戳问题的补充与hexo pdf预览</a><time datetime="2022-09-21T02:28:00.000Z" title="Created 2022-09-21 10:28:00">2022-09-21</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2022/09/19/20220919DAS%E6%94%AF%E6%92%91-%E6%97%B6%E9%97%B4%E6%88%B3%E8%AF%BB%E5%8F%96%E5%BC%82%E5%B8%B8/" title="20220919DAS支撑-时间戳读取异常">20220919DAS支撑-时间戳读取异常</a><time datetime="2022-09-19T03:21:33.000Z" title="Created 2022-09-19 11:21:33">2022-09-19</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/09/"><span class="card-archive-list-date">September 2022</span><span class="card-archive-list-count">9</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">9</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-10-25T07:25:21.476Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
